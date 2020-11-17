@@ -1,1 +1,46 @@
-//Write styles here
+.basket {
+  display: flex;
+  flex-direction: row;
+}
+
+.basket-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+  margin: 10px;
+  width: 900px;
+  border: 2px solid gray;
+  border-radius: 10px;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  &__text {
+    margin: 10px 0;
+    gap: 10px;
+  }
+  
+  &__image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 15px;
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    height: 35px;
+    margin: auto 15px;
+  }
+
+  &__counter {
+    margin: 10px;
+    font-size: 24px;
+    font-weight: 900;
+  }
+}

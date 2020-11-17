@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.scss';
 import PropTypes from 'prop-types';
-import { addInBasket } from '../Basket';
+import { handleAddItem } from '../Basket';
 
 export const Card = ({
   id,
@@ -38,7 +38,7 @@ export const Card = ({
         <button
           type="button"
           className="card__btn ui blue button"
-          onClick={() => addInBasket(title, price, id)}
+          onClick={() => handleAddItem(title, price, description, image, id)}
         >
           BUY IT
         </button>
