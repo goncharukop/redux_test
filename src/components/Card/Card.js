@@ -1,8 +1,10 @@
 import React from 'react';
 import './Card.scss';
 import PropTypes from 'prop-types';
+import { addInBasket } from '../Basket';
 
 export const Card = ({
+  id,
   image,
   title,
   description,
@@ -36,8 +38,9 @@ export const Card = ({
         <button
           type="button"
           className="card__btn ui blue button"
+          onClick={() => addInBasket(title, price, id)}
         >
-          BUY THIS
+          BUY IT
         </button>
       </div>
     </div>
@@ -45,7 +48,7 @@ export const Card = ({
 );
 
 Card.propTypes = {
-
+  id: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,

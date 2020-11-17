@@ -2,10 +2,9 @@ import React from 'react';
 import './CardsList.scss';
 import PropTypes from 'prop-types';
 import { Card } from '../Card';
-import { products } from '../data';
 
 export const CardsList = ({
-  cards = products,
+  cards = [],
 }) => (
   <div className="cards">
     {cards.map(card => (
