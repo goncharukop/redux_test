@@ -1,8 +1,16 @@
-.nav {
+.app__basket {
   display: flex;
-  margin: 20px;
+  flex-direction: column;
+  width: 100px;
+  margin: 25px auto;
+}
 
-  * {
-    margin-right: 10px;
-  }
+.app__cards {
+  display: flex;
+  justify-content: center;
+}
+
+h3,
+h2 {
+  margin: 0;
 }

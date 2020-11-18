@@ -1,24 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import 'semantic-ui-css/semantic.min.css';
 import './App.scss';
-import { Switch, Link, Route } from 'react-router-dom';
+import { Basket } from './components/Basket';
+// import { Switch, Link, Route } from 'react-router-dom';
+import { CardsList } from './components/CardsList';
+import { products } from './components/data';
 
-export const App = () => (
-  <div>
-    React starter pack
+export const App = () => {
+  // eslint-disable-next-line no-unused-vars
+  const [order2, setOrder2] = useState();
+
+  return (
     <div>
-      <nav className="nav">
-        <Link to="/">Home</Link>
-        <Link to="/users">Users</Link>
-      </nav>
+      <div className="app__basket">
+        <button type="button" className="ui yellow button">
+          CARD
+        </button>
+      </div>
 
-      <Switch>
-        <Route path="/users">
-          <div>Users page</div>
-        </Route>
-        <Route path="/">
-          <div>Home page</div>
-        </Route>
-      </Switch>
+      <Basket />
+
+      <div className="app__cards">
+        <CardsList cards={products} />
+      </div>
     </div>
-  </div>
-);
+  );
+};
