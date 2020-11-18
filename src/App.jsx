@@ -18,7 +18,7 @@ export const App = () => {
         </button>
       </div>
 
-      <Basket cards={products} />
+      <Basket />
 
       <div className="app__cards">
         <CardsList cards={products} />
